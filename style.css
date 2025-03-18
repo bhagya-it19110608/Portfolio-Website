@@ -61,6 +61,10 @@ a {
 	height: 100vh;
 	padding: 60px 9% 0;
 	color: #fff;
+	visibility: hidden;
+	opacity: 0;
+	animation: show-content 1.5s linear forwards;
+	animation-delay: 1.6s;
 }
 .home-info h1 {
 	font-size: 55px;
@@ -135,9 +139,20 @@ a {
 	width: 500px;
 	height: 500px;
 	background: conic-gradient(transparent, transparent, transparent, #76b5c5);
+	transform: rotate(0deg);
+	animation: rotate-border 10s linear infinite;
 	
 }
-
+.home-img .img-box::after {
+	animation-delay: -5s;
+	
+}
+@keyframes rotate-border {
+	100% {
+		transform: rotate(360deg);
+	}
+	
+}
 .home-img .img-box .img-item {
 	position: relative;
 	width: 100%;
