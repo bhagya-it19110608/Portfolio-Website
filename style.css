@@ -72,8 +72,26 @@ a {
 	padding-top: 180px;
 }
 .home-info h2 {
+	display: inline-block;
 	font-size: 32px;
 	margin-top: -10px;
+}
+.home-info h2 span {
+	position: relative;
+	display: inline-block;
+	color: #76b5c5;
+	-webkit-text-stroke: .7px #76b5c5;
+	
+}
+.home-info h2 span:: before {
+	content: attr(data-text);
+	position: absolute;
+	width: 100%;
+	border-right: 2px solid #76b5c5;
+	color: #76b5c5;
+	white-space: nowrap;
+	overflow: hidden;
+	
 }
 .home-info p {
 	font-size: 16px;
